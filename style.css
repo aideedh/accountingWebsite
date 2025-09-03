@@ -1,4 +1,4 @@
-/* base layout */
+/* Reset and Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,14 +8,11 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f4f4;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
 }
 
-/* --------------------------------------------------------------------------------------------------------- */
-/* Sidebar layout */
+/* Sidebar */
 .sidebar {
+  position: fixed;
   width: 280px;
   height: 100vh;
   background-color: #111;
@@ -23,13 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: 40px 24px;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
-/* Sidebar inner section */
 .sidebar-main {
   display: flex;
   flex-direction: column;
@@ -37,17 +29,14 @@ body {
   justify-content: center;
 }
 
-/* Logo */
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 1.5;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
 
-/* Navigation */
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -70,32 +59,35 @@ body {
   color: #FFD700;
 }
 
-/* --------------------------------------------------------------------------------------------------------- */
-/* Main Section */
-.main-section {
+/* Content wrapper beside sidebar */
+.content-wrapper {
   margin-left: 280px;
-  width: calc(100% - 280px);
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO SECTION */
+.main-section {
   position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Background Video */
-.main-section video {
+.bg-video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(0.6);
   z-index: 0;
+  filter: brightness(0.6);
 }
 
-/* Foreground content box */
 .hero-overlay {
   position: relative;
   z-index: 1;
@@ -128,7 +120,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Buttons */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -162,50 +153,42 @@ body {
   transform: scale(1.05);
 }
 
-
-
-
-
-
+/* Q&A SECTION */
 .qa-section {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 280px; /* Match your sidebar width */
-  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 60px 40px;
+  gap: 40px;
+  align-items: center;
 }
 
 .qa-text {
-  flex: 1;
-  padding: 60px 40px;
-  background-color: #fff;
+  flex: 1 1 400px;
+  max-width: 600px;
 }
 
-.qa-text .qa-item {
-  margin-bottom: 40px;
-}
-
-.qa-text h3 {
+.qa-text h2 {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #111;
+  margin-top: 40px;
 }
 
 .qa-text p {
   font-size: 1rem;
-  color: #333;
   line-height: 1.6;
+  color: #333;
 }
 
 .qa-image {
-  flex: 1;
-  min-width: 400px;
-  max-height: 100vh;
-  overflow: hidden;
+  flex: 1 1 300px;
+  max-width: 500px;
 }
 
 .qa-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
