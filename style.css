@@ -164,3 +164,48 @@ body {
 
 
 
+
+
+
+.qa-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 280px; /* Match your sidebar width */
+  min-height: 100vh;
+}
+
+.qa-text {
+  flex: 1;
+  padding: 60px 40px;
+  background-color: #fff;
+}
+
+.qa-text .qa-item {
+  margin-bottom: 40px;
+}
+
+.qa-text h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.qa-text p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.qa-image {
+  flex: 1;
+  min-width: 400px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.qa-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
